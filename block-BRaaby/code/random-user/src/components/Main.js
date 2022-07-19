@@ -31,6 +31,7 @@ class Main extends React.Component {
   }
 
   handleUI = (value) => {
+    // eslint-disable-next-line default-case
     switch(value) {
       case "name" :
         return <Name info = {this.state.randomUserInfo ? this.state.randomUserInfo.results[0].name : null} />
@@ -38,12 +39,15 @@ class Main extends React.Component {
         return <Email info= {this.state.randomUserInfo ? this.state.randomUserInfo.results[0].email : null} />
       case "password" :
         return <Password info= {this.state.randomUserInfo ? this.state.randomUserInfo.results[0].login.password : null} />
+        // eslint-disable-next-line no-unreachable
         break;
       case "age" :
         return <Age info= {this.state.randomUserInfo ? this.state.randomUserInfo.results[0].registered.age : null} />
+        // eslint-disable-next-line no-unreachable
         break;
       case "phone" :
         return <Phone info= {this.state.randomUserInfo ? this.state.randomUserInfo.results[0].phone : null} />
+        // eslint-disable-next-line no-unreachable
         break;
     }
   }
@@ -81,6 +85,7 @@ export default Main;
 
 
 class Name extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
@@ -96,6 +101,7 @@ class Name extends React.Component {
 
 
 class Email extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
@@ -109,6 +115,7 @@ class Email extends React.Component {
 }
 
 class Password extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
@@ -122,6 +129,7 @@ class Password extends React.Component {
 }
 
 class Age extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
@@ -137,6 +145,7 @@ class Age extends React.Component {
 }
 
 class Phone extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
   }
